@@ -1,0 +1,160 @@
+string_t name1, name2;
+int middleChoice, endChoice, choice; 
+int age = randint(12, 100);
+int months =  randint(6, 11);
+
+//intro
+void intro(string_t name1, string_t name2){
+    printf("\nYour character's name is ", name1, ". ", name1, " is " , age, " years old. He has just woken up from bed. He has been stuck in quarantine for ", months, " months. He want to have fun today. He decided to go out with his friend ", name2, ". They can visit the movie theaters, go to the lake, or go on a hike. Choose your adventure! \n");
+    printf("Would you like to see a roadamp first? (0 = no, 1 = yes) ");
+    scanf("%i", &choice);
+    
+    //roadmap
+    if (choice == 1) {
+        printf("If you go on a hike, you encounter a bear and you can either freeze, flight, or fight. Freezing makes the bear go away. Fighting results in death. Freezing results in being alive. Fleeing results in near death but still remaining alive. If you go to the lake, you can go home and not get sunburnt. If you wait for the sun to go down, you get to swim without sunburn. If you swim anyways, you get sunburnt and ge tskin cancer. If you go to the movie theatres, you can watch the movies both you and your friend wants to watch. If you eat at the bbq, you guys are both happy with this compromise. If watch the movie your friends wants to watch and watch the horror movie another time, you guys are both happy.\n");
+        printf("Choose choices 1, 2, or 3: ");
+        scanf("%i", &middleChoice);
+    }
+    if (choice == 0) {
+        printf("Choose choices 1, 2, or 3: ");
+        scanf("%i", &middleChoice);
+    }
+    while(middleChoice != 1 && middleChoice != 2 && middleChoice != 3){
+        printf("Your choice must be between 1 and 3: ");
+        scanf("%i", &middleChoice);
+    }
+}
+
+//middle1
+void middle1() {
+    printf("\n", name1, " chose to go to the movie theaters with " ,name2, ". ", name1, " wants to see a horror movie, but his friend is too scared to watch the movie ", name1, " wants to watch. They  argue about the problem for a while. Ultimately, they decide to make alternative plans. They can either watch another movie, go to the restaurant, or watch the horror movie first and another movie after. ");
+    printf("Choose choices 1, 2, or 3: ");
+    scanf("%i", &endChoice);
+    while(endChoice != 1 && endChoice != 2 && endChoice != 3){
+        printf("Your choice must be between 1 and 3: ");
+        scanf("%i", &endChoice);
+    }
+}
+
+//middle2
+void middle2() {
+    printf("\n", name1, " and ", name2, " chose to go to the lake. It just so happens to be summer, which is also perfect. However, today is a little too perfect. For some reason, it is way too hot and sunburn is a threat. After talking for a while, they decide to either go home, wait for the sun to go down a little, or swim anyways. ");
+    printf("Choose choices 1, 2, or 3: ");
+    scanf("%i", &endChoice);
+    while(endChoice != 1 && endChoice != 2 && endChoice != 3){
+        printf("Your choice must be between 1 and 3: ");
+        scanf("%i", &endChoice);
+    }
+}
+
+//middle3
+void middle3() {
+    printf("\n", name1, " and ", name2, " decided to go on a hike. They hike the trail local to you. On the trail, they begin to hear weird noises. A bear comes out of a bush. They are startled and doesn't know what to do. They can either fight back, run, or freeze. ");
+    printf("Choose choices 1, 2, or 3: ");
+    scanf("%i", &endChoice);
+    while(endChoice != 1 && endChoice != 2 && endChoice != 3){
+        printf("Your choice must be between 1 and 3: ");
+        scanf("%i", &endChoice);
+    }
+}
+
+//end1
+void end1(){
+    printf("\n", name1, " decided to watch another movie with ", name2, ". You guys decided to watch Star Wars. The movie is rated PG-13. Although this was not the movie ", name1, " wanted to watch initially, he is happy he made a compromise that made everyone happy in the end. He decided that he'll just watch the horror movie ", name2, " wanted to watch next time with different friends. ");
+    exit(1);
+}
+
+//end2
+void end2(){
+    printf("\nThey decided to go ditch the movie theaters and go eat out. ", name1, " told his friend he should try eating at a Korean BBQ since he has never experienced that before. When they get to the place, ", name2, " is surprised by the experience. ", name2, " was fascinated by the fact that he are given raw meat and have to grill his own food. At the end of the day, he tells ", name1, " that he was happy that they decided to go eat out instead. They ended up paying 50 dollars.");
+    exit(1);
+}
+
+//end3
+void end3(){
+    printf("\n", name1, " and ", name2, " decided to watch the horror movie first. The friend was pretty scared and was not really thrilled about the experience. After the movie, they were pretty exhausted to go and watch another movie right after. However, " ,name1, " wanted to make his friend happy. Overall, everyone came home satisfied. ");
+    exit(1);
+}
+
+//end4
+void end4(){
+    printf("\n", name1, " and ", name2, " chose to go home. They've been in quarantine for a few months now and now sad that your plans were canceled after a long wait. It takes about an hour or two to drive back home. On the way back, you get rear ended by another car and die. You do nott ever get to go to the lake again. ");
+    exit(1);
+}
+
+//end5
+void end5(){
+    printf("\n", name1, " and ", name2, " decided to wait for the sun to go down. They gradually get impatient as the hours pass. Eventually, the conditions are just right. They both swim and are having fun. They both come home happy. ");
+    exit(1);
+}
+
+//end6
+void end6(){
+    printf("\n", name1, " and ", name2, " swim  anyways. After swimming for an hour, their skin begins to hurt. Their whole body becomes weak and they have to go back to shore. They decide to go back home. After going back home, they find that they have skin cancer. Should have not swam in the lake. ");
+    exit(1);
+}
+
+//end7
+void end7(){
+    printf("\n", name1, " and ", name2, " decided to fight back. Turns out that they have no bear spray and were stupid enough to fight a bear without a plan. They try to scream at the beat and afterwards, wrestle with it. The bear ends up overpowering thedm. They both die.");
+    exit(1);
+}
+
+//end8
+void end8(){
+    printf("\n", name1, " and ", name2, " decided to run. They decide to split up. The bear ends up chasing after ", name1, " while his friend runs. The bear is very fast and just a few feet away from you." ,name1, " manages to make the right maneuvers and outrun the bear. Congrats. ");
+    exit(1);
+}
+
+//end9
+void end9(){
+    printf("\n", name1, " and ", name2, " decided to freeze. They are very still. They do not make eye contact with the bear and make no noises. The bear realizes that there is not a threat and backs down. They survive another day to tell this dangerous encounter. ");
+    exit(1);
+}
+
+//main
+int main(){  
+    printf("Choose your name: ");
+    scanf("%s", &name1);
+    printf("Choose your friend's name: ");
+    scanf("%s", &name2);
+    intro(name1, name2);
+    if (middleChoice == 1){
+        middle1();
+        if(endChoice == 1){
+            end1();
+        }
+        if(endChoice == 2){
+            end2();
+        }
+        if(endChoice == 3){
+            end3();
+        }
+    }
+    
+    if (middleChoice == 2){
+        middle2();
+        if(endChoice == 1){
+            end4();
+        }
+        if(endChoice == 2){
+            end5();
+        }
+        if(endChoice == 3){
+            end6();
+        }
+    }
+        
+    if (middleChoice == 3){
+        middle3();
+        if(endChoice == 1){
+            end7();
+        }
+        if(endChoice == 2){
+            end8();
+        }
+        if(endChoice == 3){
+            end9();
+        }
+    }
+}
